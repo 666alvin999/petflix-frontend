@@ -13,9 +13,13 @@ const Footer = () => {
 					</p>
 				</div>
 
-				<div className="w-1/3 flex flex-row justify-center items-center">
-					Mail: petflix@mail-ecv.fr<br />
-					Tél: 06XXXXXXXX
+				<div className="w-1/3 flex flex-col justify-center items-center">
+					<p className="w-[40%] underline">
+						Mail: petflix@mail-ecv.fr
+					</p>
+					<p className="w-[40%] underline">
+						Tél: 06XXXXXXXX
+					</p>
 				</div>
 
 				<div className="text-white w-1/3 flex flex-row justify-center items-center gap-4">

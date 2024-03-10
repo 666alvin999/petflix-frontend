@@ -19,7 +19,7 @@ const HomepagePresentationVideoFeed = () => {
 			<div className="bg-amber-950 text-white py-8 px-8 w-[70%] flex flex-row flex-wrap justify-around items-center gap-8 rounded-3xl">
 				{
 					presentationVideos.map(presentationVideo =>
-						<PresentationVideoOverview id={presentationVideo.id} title={presentationVideo.title} description={presentationVideo.description}/>
+						<PresentationVideoOverview id={presentationVideo.id} title={presentationVideo.title} description={presentationVideo.description} animalTypes={presentationVideo.animalTypes} uploadDate={presentationVideo.uploadDate}/>
 					)
 				}
 			</div>

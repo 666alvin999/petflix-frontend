@@ -5,17 +5,23 @@ const mockPresentationVideosData = (): Array<PresentationVideo> => {
 		{
 			id: "DHfRfU3XUEo",
 			title: "title1",
-			description: "dolore ex fames quaeque aeque placerat alienum convenire etiam eos dicant lorem dicam dicam honestatis est idque sem sonet partiendo primis graeci dolorem volutpat appetere pretium repudiare dicat equidem legimus ne suspendisse aliquet eam condimentum urna necessitatibus atqui solum faucibus animal decore posuere aenean explicari volumus putent purus"
+			description: "dolore ex fames quaeque aeque placerat alienum convenire etiam eos dicant lorem dicam dicam honestatis est idque sem sonet partiendo primis graeci dolorem volutpat appetere pretium repudiare dicat equidem legimus ne suspendisse aliquet eam condimentum urna necessitatibus atqui solum faucibus animal decore posuere aenean explicari volumus putent purus",
+			animalTypes: ["chien", "chat"],
+			uploadDate: new Date(2024, 2, 10)
 		},
 		{
 			id: "DHfRfU3XUEo",
 			title: "title2",
-			description: "dolore ex fames quaeque aeque placerat alienum convenire etiam eos dicant lorem dicam dicam honestatis est idque sem sonet partiendo primis graeci dolorem volutpat appetere pretium repudiare dicat equidem legimus ne suspendisse aliquet eam condimentum urna necessitatibus atqui solum faucibus animal decore posuere aenean explicari volumus putent purus"
+			description: "dolore ex fames quaeque aeque placerat alienum convenire etiam eos dicant lorem dicam dicam honestatis est idque sem sonet partiendo primis graeci dolorem volutpat appetere pretium repudiare dicat equidem legimus ne suspendisse aliquet eam condimentum urna necessitatibus atqui solum faucibus animal decore posuere aenean explicari volumus putent purus",
+			animalTypes: ["chien", "chat"],
+			uploadDate: new Date(2024, 2, 10)
 		},
 		{
 			id: "DHfRfU3XUEo",
 			title: "title3",
-			description: "dolore ex fames quaeque aeque placerat alienum convenire etiam eos dicant lorem dicam dicam honestatis est idque sem sonet partiendo primis graeci dolorem volutpat appetere pretium repudiare dicat equidem legimus ne suspendisse aliquet eam condimentum urna necessitatibus atqui solum faucibus animal decore posuere aenean explicari volumus putent purus"
+			description: "dolore ex fames quaeque aeque placerat alienum convenire etiam eos dicant lorem dicam dicam honestatis est idque sem sonet partiendo primis graeci dolorem volutpat appetere pretium repudiare dicat equidem legimus ne suspendisse aliquet eam condimentum urna necessitatibus atqui solum faucibus animal decore posuere aenean explicari volumus putent purus",
+			animalTypes: ["chien", "chat"],
+			uploadDate: new Date(2024, 2, 10)
 		}
 	);
 }

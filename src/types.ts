@@ -6,6 +6,8 @@ type PresentationVideo = {
 	id: string;
 	title: string;
 	description: string;
+	animalTypes: Array<string>;
+	uploadDate: Date;
 }
 
 export type {InputChangeEvent, PresentationVideo};
