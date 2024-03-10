@@ -1,6 +1,6 @@
 import {Header} from "../header";
 import {Footer} from "../footer";
-import {HomepageVideoFeed} from "./components";
+import {HomepagePresentationVideoFeed} from "./components";
 
 const Homepage = () => {
 	return (
@@ -19,7 +19,7 @@ const Homepage = () => {
 				<img className="mr-10 h-96 rounded-full" src="/images/oslo-homepage.png" alt="white cat" />
 			</div>
 
-			<HomepageVideoFeed/>
+			<HomepagePresentationVideoFeed/>
 
 			<Footer/>
 		</div>

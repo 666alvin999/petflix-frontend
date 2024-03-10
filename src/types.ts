@@ -2,4 +2,10 @@ import {ChangeEvent} from "react";
 
 type InputChangeEvent = ChangeEvent<HTMLInputElement>;
 
-export type {InputChangeEvent};
+type PresentationVideo = {
+	id: string;
+	title: string;
+	description: string;
+}
+
+export type {InputChangeEvent, PresentationVideo};

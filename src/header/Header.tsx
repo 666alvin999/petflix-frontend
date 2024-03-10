@@ -1,7 +1,7 @@
 import "./header.css";
 import {Link} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faSearch} from "@fortawesome/free-solid-svg-icons";
+import {faPaw, faSearch} from "@fortawesome/free-solid-svg-icons";
 import {useState} from "react";
 import {InputChangeEvent} from "../types.ts";
 
@@ -19,7 +19,11 @@ const Header = () => {
 				<div className="w-1/3">
 					<div className="w-1/3">
 						<Link to="/">
-							<h1 className="font-medium text-3xl">Petflix</h1>
+							<h1 className="font-medium text-3xl">
+								P
+								<span><FontAwesomeIcon className="w-6" icon={faPaw}/></span>
+								tflix
+							</h1>
 						</Link>
 					</div>
 				</div>

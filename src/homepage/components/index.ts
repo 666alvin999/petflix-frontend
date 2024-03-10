@@ -1,3 +1,3 @@
-import HomepageVideoFeed from "./HomepageVideoFeed.tsx";
+import HomepagePresentationVideoFeed from "./HomepagePresentationVideoFeed.tsx";
 
-export {HomepageVideoFeed};
+export {HomepagePresentationVideoFeed};
