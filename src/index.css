@@ -7,6 +7,6 @@
 @layer base {
     body {
         font-family: 'Handlee', cursive;
-        @apply m-0 p-0 antialiased;
+        @apply m-0 p-0 antialiased bg-amber-50;
     }
 }

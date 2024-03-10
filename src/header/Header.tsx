@@ -15,7 +15,7 @@ const Header = () => {
 
 	return (
 		<>
-			<div className="bg-amber-700 px-8 py-8 text-white flex justify-between items-center">
+			<div className="bg-amber-950 px-8 py-8 text-white flex justify-between items-center">
 				<div className="w-1/3">
 					<div className="w-1/3">
 						<Link to="/">
@@ -24,15 +24,15 @@ const Header = () => {
 					</div>
 				</div>
 
-				<ul className="flex gap-24 w-1/3">
-					<li className="menu-option">Home</li>
+				<ul className="flex justify-center items-center gap-24 w-1/3">
+					<li className="menu-option">Accueil</li>
 					<li className="menu-option">Adoptions</li>
-					<li className="menu-option">Controls</li>
+					<li className="menu-option">Contrôles</li>
 				</ul>
 
 				<form className="w-1/3 flex justify-end items-center">
 					<input
-						className="pl-2 text-sm font-bold h-8 w-52 -mr-8 text-amber-700 rounded-full focus:outline-amber-700"
+						className="pl-2 text-sm font-bold h-8 w-52 -mr-8 text-amber-950 rounded-full focus:outline-amber-950"
 						type="text"
 						value={search}
 						onChange={event => changeSearch(event)}
@@ -40,7 +40,7 @@ const Header = () => {
 					/>
 					<FontAwesomeIcon
 						icon={faSearch}
-						className="bg-amber-700 rounded-full w-3 h-3 p-2"
+						className="bg-amber-950 rounded-full w-3 h-3 p-2"
 					/>
 				</form>
 			</div>
