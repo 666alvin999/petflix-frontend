@@ -1,6 +1,7 @@
 import {Header} from "../header";
 import {Footer} from "../footer";
 import {HomepagePresentationVideoFeed} from "./components";
+import homepagePicture from '../../images/oslo-homepage.png';
 
 const Homepage = () => {
 	return (
@@ -16,7 +17,7 @@ const Homepage = () => {
 					</p>
 				</div>
 
-				<img className="mr-10 h-96 rounded-full" src="/images/oslo-homepage.png" alt="white cat" />
+				<img className="mr-10 h-96 rounded-full" src={homepagePicture} alt="white cat" />
 			</div>
 
 			<HomepagePresentationVideoFeed/>
