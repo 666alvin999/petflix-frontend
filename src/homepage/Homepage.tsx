@@ -6,7 +6,7 @@ const Homepage = () => {
 		<>
 			<Header/>
 
-			<div className="mt-32 flex flex-row justify-between items-center gap-24">
+			<div className="mt-40 flex flex-row justify-between items-center gap-24">
 				<div className="bg-amber-950 h-96 p-10 flex flex-col justify-center items-center rounded-r-full">
 					<h2 className="text-3xl text-white mb-10">Qui sommes-nous ?</h2>
 
