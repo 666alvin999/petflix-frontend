@@ -15,7 +15,7 @@ const Header = () => {
 
 	return (
 		<>
-			<div className="bg-amber-950 px-8 py-8 text-white flex justify-between items-center">
+			<div className="bg-amber-950 px-8 py-8 w-[100%] text-white flex justify-between items-center">
 				<div className="w-1/3">
 					<div className="w-1/3">
 						<Link to="/">
