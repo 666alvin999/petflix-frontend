@@ -8,7 +8,7 @@ type PresentationVideo = {
 	title: string;
 	description: string;
 	animalTypes: Array<string>;
-	date: Date;
+	uploadDate: Date;
 }
 
 type PresentationVideoFilters = {

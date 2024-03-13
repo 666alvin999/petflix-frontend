@@ -106,7 +106,7 @@ const HomepagePresentationVideoFeed = () => {
 										title={presentationVideo.title}
 										description={presentationVideo.description}
 										animalTypes={presentationVideo.animalTypes}
-										date={new Date(presentationVideo.date)}
+										uploadDate={new Date(presentationVideo.uploadDate)}
 									/>
 								)
 							}

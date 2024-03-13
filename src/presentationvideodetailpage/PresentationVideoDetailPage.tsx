@@ -8,7 +8,7 @@ const PresentationVideoDetailPage = () => {
 	const {id: presentationVideoId} = useParams();
 	const {isPending, isError, data} = usePresentationVideoById(presentationVideoId!);
 
-	console.log(presentationVideoId);
+	console.log(data);
 
 	return (
 		<>

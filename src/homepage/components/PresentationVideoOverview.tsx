@@ -2,7 +2,7 @@ import PresentationVideoThumbnail from "./PresentationVideoThumbnail.tsx";
 import {PresentationVideo} from "../../types.ts";
 import {Link} from "react-router-dom";
 
-const PresentationVideoOverview = ({id, title, description, animalTypes, date}: PresentationVideo) => {
+const PresentationVideoOverview = ({id, title, description, animalTypes, uploadDate}: PresentationVideo) => {
 
 	return (
 		<>
@@ -28,7 +28,7 @@ const PresentationVideoOverview = ({id, title, description, animalTypes, date}: 
 				</p>
 
 				<p className="text-lg font-bold w-[100%] text-right">
-					{`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}
+					{`${uploadDate.getDate()}/${uploadDate.getMonth() + 1}/${uploadDate.getFullYear()}`}
 				</p>
 			</div>
 		</>
