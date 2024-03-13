@@ -21,7 +21,7 @@ const Header = () => {
 						<Link to="/">
 							<h1 className="font-medium text-3xl">
 								P
-								<span><FontAwesomeIcon className="w-6" icon={faPaw}/></span>
+								<span><FontAwesomeIcon className="w-6" icon={faPaw} /></span>
 								tflix
 							</h1>
 						</Link>
@@ -29,14 +29,16 @@ const Header = () => {
 				</div>
 
 				<ul className="flex justify-center items-center gap-24 w-1/3">
-					<li className="menu-option">Accueil</li>
+					<Link to="/">
+						<li className="menu-option">Accueil</li>
+					</Link>
 					<li className="menu-option">Adoptions</li>
 					<li className="menu-option">Contrôles</li>
 				</ul>
 
 				<form className="w-1/3 flex justify-end items-center">
 					<input
-						className="pl-2 text-sm font-bold h-8 w-52 -mr-8 text-amber-950 rounded-full focus:outline-amber-950"
+						className=" bg-amber-100 text-amber-950 text-sm font-bold w-52 h-8 pl-4 -mr-8 rounded-full focus:outline-amber-950"
 						type="text"
 						value={search}
 						onChange={event => changeSearch(event)}
@@ -44,7 +46,7 @@ const Header = () => {
 					/>
 					<FontAwesomeIcon
 						icon={faSearch}
-						className="bg-amber-950 rounded-full w-3 h-3 p-2"
+						className="bg-amber-950 w-3 h-3 p-2 rounded-full"
 					/>
 				</form>
 			</div>

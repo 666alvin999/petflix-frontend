@@ -2,7 +2,7 @@ import {useQuery} from "@tanstack/react-query";
 
 const usePresentationVideoOverviews = (animalFilter: string | null, cityFilter: string | null) => {
 	return useQuery({
-		queryKey: ["presentationVideoOverviews"],
+		queryKey: ["presentationVideoOverviews", animalFilter, cityFilter],
 		queryFn: async () => {
 			let url = `http://localhost:8080/getAllVideoOverviews`;
 

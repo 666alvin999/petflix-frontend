@@ -1,6 +1,7 @@
-import {ChangeEvent} from "react";
+import { ChangeEvent } from "react";
 
 type InputChangeEvent = ChangeEvent<HTMLInputElement>;
+type SelectChangeEvent = ChangeEvent<HTMLSelectElement>;
 
 type PresentationVideo = {
 	id: string;
@@ -10,4 +11,9 @@ type PresentationVideo = {
 	date: Date;
 }
 
-export type {InputChangeEvent, PresentationVideo};
+type PresentationVideoFilters = {
+	animalFilters: Array<string>;
+	cityFilters: Array<string>;
+}
+
+export type {InputChangeEvent, SelectChangeEvent, PresentationVideo, PresentationVideoFilters};
