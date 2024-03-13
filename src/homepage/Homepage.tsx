@@ -2,6 +2,7 @@ import {Header} from "../header";
 import {Footer} from "../footer";
 import {HomepagePresentationVideoFeed} from "./components";
 import homepagePicture from '../../images/oslo-homepage.png';
+import "./homepage.css";
 
 const Homepage = () => {
 	return (
@@ -9,7 +10,7 @@ const Homepage = () => {
 			<Header/>
 
 			<div className="flex flex-row justify-between items-center gap-24">
-				<div className="bg-amber-950 h-96 p-10 flex flex-col justify-center items-center rounded-r-full">
+				<div className="presentation">
 					<h2 className="text-3xl text-white mb-10 truncate">Qui sommes-nous ?</h2>
 
 					<p className="text-white text-xl">
@@ -17,7 +18,7 @@ const Homepage = () => {
 					</p>
 				</div>
 
-				<img className="mr-10 h-96 rounded-full" src={homepagePicture} alt="white cat" />
+				<img className="presentation-image" src={homepagePicture} alt="white cat" />
 			</div>
 
 			<HomepagePresentationVideoFeed/>

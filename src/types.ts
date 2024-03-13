@@ -7,7 +7,7 @@ type PresentationVideo = {
 	title: string;
 	description: string;
 	animalTypes: Array<string>;
-	uploadDate: Date;
+	date: Date;
 }
 
 export type {InputChangeEvent, PresentationVideo};

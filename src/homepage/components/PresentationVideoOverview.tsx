@@ -1,11 +1,12 @@
 import PresentationVideoThumbnail from "./PresentationVideoThumbnail.tsx";
 import {PresentationVideo} from "../../types.ts";
 
-const PresentationVideoOverview = ({id, title, description, animalTypes, uploadDate}: PresentationVideo) => {
+const PresentationVideoOverview = ({id, title, description, animalTypes, date}: PresentationVideo) => {
+
 	return (
 		<>
 			<div
-				className="bg-amber-100 text-amber-950 p-4 w-[48%] flex flex-col justify-around items-center gap-2 rounded-2xl">
+				className="bg-amber-100 text-amber-950 p-4 w-[48%] h-[600px] flex flex-col justify-around items-center gap-2 rounded-2xl">
 				<PresentationVideoThumbnail id={id} />
 
 				<h3 className="text-xl font-bold w-[100%] leading-snug text-center capitalize">
@@ -25,7 +26,7 @@ const PresentationVideoOverview = ({id, title, description, animalTypes, uploadD
 				</p>
 
 				<p className="text-lg font-bold w-[100%] text-right">
-					{uploadDate.toDateString()}
+					{`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}
 				</p>
 			</div>
 		</>
