@@ -3,7 +3,8 @@ import PresentationVideoOverview from "./PresentationVideoOverview.tsx";
 import {PresentationVideo, SelectChangeEvent} from "../../types.ts";
 import {useState} from "react";
 import useFilters from "../../queries/useFilters.ts";
-import "../homepage.css"
+import "../homepage.css";
+import "../../index.css";
 
 const HomepagePresentationVideoFeed = () => {
 
@@ -13,15 +14,13 @@ const HomepagePresentationVideoFeed = () => {
 	const {
 		isPending: filtersIsPending,
 		isError: filtersIsError,
-		data: filtersData,
-		error: filtersError
+		data: filtersData
 	} = useFilters();
 
 	const {
 		isPending: presentationVideoIsPending,
 		isError: presentationVideoIsError,
-		data: presentationVideoData,
-		error: presentationVideoError
+		data: presentationVideoData
 	} = usePresentationVideoOverviews(animalFilter, cityFilter);
 
 	const isPending = () => {
@@ -44,8 +43,7 @@ const HomepagePresentationVideoFeed = () => {
 
 	return (
 		<>
-			<div
-				className="bg-amber-950 text-white py-8 px-8 w-[70%] flex flex-col gap-8 rounded-3xl shadow-box">
+			<div className="bg-amber-950 text-white py-8 px-8 w-[70%] flex flex-col justify-center items-center gap-8 rounded-3xl shadow-box">
 				{
 					isPending() &&
 					<div className="spinner"></div>
@@ -53,19 +51,21 @@ const HomepagePresentationVideoFeed = () => {
 
 				{
 					isError() &&
-					<p>
-						{presentationVideoIsError ? presentationVideoError : filtersError}
-					</p>
+					<div className="flex flex-col justify-center items-center">
+						<h2 className="text-3xl font-bold">Oh oh !</h2>
+						<p className="text-xl font-bold">Quelque chose s'est mal passé :( </p>
+					</div>
 				}
 
 				{
-					!(isPending() || isPending()) &&
+					!(isPending() || isError()) &&
 					<>
 						<div className="flex flex-row justify-center gap-12">
 							<div className="flex flex-col items-center">
 								<label className="text-amber-100 font-bold text-sm" htmlFor="animalFilters">Espèce:</label>
 
-								<select className="filter-select focus:outline-amber-950" id="animalFilters" onChange={(event) => changeFilter(event)}>
+								<select className="filter-select focus:outline-amber-950" id="animalFilters"
+										onChange={(event) => changeFilter(event)}>
 									<option value="" selected={animalFilter === null}>
 										Toutes
 									</option>
@@ -82,7 +82,8 @@ const HomepagePresentationVideoFeed = () => {
 							<div className="flex flex-col items-center">
 								<label className="text-amber-100 font-bold text-sm" htmlFor="cityFilters">Ville:</label>
 
-								<select className="filter-select focus:outline-amber-950" id="cityFilters" onChange={(event) => changeFilter(event)}>
+								<select className="filter-select focus:outline-amber-950" id="cityFilters"
+										onChange={(event) => changeFilter(event)}>
 									<option value="" selected={cityFilter === null}>
 										Toutes
 									</option>
@@ -111,7 +112,6 @@ const HomepagePresentationVideoFeed = () => {
 							}
 						</div>
 					</>
-
 				}
 			</div>
 		</>
