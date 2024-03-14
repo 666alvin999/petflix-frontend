@@ -4,7 +4,7 @@ const usePresentationVideoOverviews = (animalFilter: string | null, cityFilter: 
 	return useQuery({
 		queryKey: ["presentationVideoOverviews", animalFilter, cityFilter],
 		queryFn: async () => {
-			let url = `http://localhost:8080/getAllVideoOverviews`;
+			let url = `${import.meta.env.VITE_API_URL}/getAllVideoOverviews`;
 
 			if (animalFilter && cityFilter) {
 				url = url + `?animalFilter=${animalFilter}&cityFilter=${cityFilter}`;

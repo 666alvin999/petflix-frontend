@@ -4,7 +4,7 @@ const useFilters = () => {
 	return useQuery({
 		queryKey: ["filters"],
 		queryFn: async () => {
-			const url = `http://localhost:8080/getFilters`;
+			const url = `${import.meta.env.VITE_API_URL}/getFilters`;
 
 			const options: RequestInit = {
 				method: "GET",

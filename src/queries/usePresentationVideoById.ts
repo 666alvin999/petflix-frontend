@@ -4,7 +4,7 @@ const usePresentationVideoDetailPage = (videoId: string) => {
 	return useQuery({
 		queryKey: ["presentationVideoDetailPage"],
 		queryFn: async () => {
-			const url = `http://localhost:8080/video/getPresentationVideoDetails?presentationVideoId=${videoId}`;
+			const url = `${import.meta.env.VITE_API_URL}/video/getPresentationVideoDetails?presentationVideoId=${videoId}`;
 
 			const options: RequestInit = {
 				method: "GET",
