@@ -7,13 +7,21 @@ type PresentationVideo = {
 	id: string;
 	title: string;
 	description: string;
-	animalTypes: Array<string>;
 	uploadDate: Date;
 }
 
-type PresentationVideoFilters = {
-	animalFilters: Array<string>;
-	cityFilters: Array<string>;
+type PresentationVideoAndAnimalTypes = {
+	presentationVideo: PresentationVideo;
+	animalTypes: Array<string>;
 }
 
-export type {InputChangeEvent, SelectChangeEvent, PresentationVideo, PresentationVideoFilters};
+type Animal = {
+	name: string;
+	age: number;
+	type: string;
+	presentationVideoId: string;
+	arrivalDate: Date;
+	adopted: boolean;
+}
+
+export type {InputChangeEvent, SelectChangeEvent, PresentationVideo, PresentationVideoAndAnimalTypes, Animal};

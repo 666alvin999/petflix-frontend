@@ -5,13 +5,21 @@
 @tailwind utilities;
 
 @layer base {
+    html {
+        @apply h-[100%];
+    }
+
     body {
         font-family: 'Handlee', cursive;
-        @apply m-0 p-0 w-[100%] antialiased bg-amber-100;
+        @apply h-[100%] m-0 p-0 antialiased bg-amber-100;
     }
 }
 
 @layer components {
+    #root {
+        @apply h-[100%];
+    }
+
     .spinner {
         width: 56px;
         height: 56px;

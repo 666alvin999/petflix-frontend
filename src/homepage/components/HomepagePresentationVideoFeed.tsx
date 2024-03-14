@@ -1,6 +1,6 @@
 import {usePresentationVideoOverviews} from "../../queries";
 import PresentationVideoOverview from "./PresentationVideoOverview.tsx";
-import {PresentationVideo, SelectChangeEvent} from "../../types.ts";
+import {PresentationVideoAndAnimalTypes, SelectChangeEvent} from "../../types.ts";
 import {useState} from "react";
 import useFilters from "../../queries/useFilters.ts";
 import "../homepage.css";
@@ -18,17 +18,17 @@ const HomepagePresentationVideoFeed = () => {
 	} = useFilters();
 
 	const {
-		isPending: presentationVideoIsPending,
-		isError: presentationVideoIsError,
-		data: presentationVideoData
+		isPending: presentationVideoAndAnimalTypesIsPending,
+		isError: presentationVideoAndAnimalTypesIsError,
+		data: presentationVideoAndAnimalTypesDataList
 	} = usePresentationVideoOverviews(animalFilter, cityFilter);
 
 	const isPending = () => {
-		return filtersIsPending || presentationVideoIsPending;
+		return filtersIsPending || presentationVideoAndAnimalTypesIsPending;
 	}
 
 	const isError = () => {
-		return presentationVideoIsError || filtersIsError;
+		return presentationVideoAndAnimalTypesIsError || filtersIsError;
 	}
 
 	const changeFilter = (event: SelectChangeEvent) => {
@@ -43,7 +43,8 @@ const HomepagePresentationVideoFeed = () => {
 
 	return (
 		<>
-			<div className="bg-amber-950 text-white py-8 px-8 w-[70%] flex flex-col justify-center items-center gap-8 rounded-3xl shadow-box">
+			<div
+				className="bg-amber-950 text-white py-8 px-8 w-[70%] flex flex-col justify-center items-center gap-8 rounded-3xl shadow-box">
 				{
 					isPending() &&
 					<div className="spinner"></div>
@@ -100,13 +101,10 @@ const HomepagePresentationVideoFeed = () => {
 
 						<div className="flex flex-row flex-wrap justify-around items-center gap-8">
 							{
-								presentationVideoData.map((presentationVideo: PresentationVideo) =>
+								presentationVideoAndAnimalTypesDataList.map((presentationVideoAndAnimalTypes: PresentationVideoAndAnimalTypes) =>
 									<PresentationVideoOverview
-										id={presentationVideo.id}
-										title={presentationVideo.title}
-										description={presentationVideo.description}
-										animalTypes={presentationVideo.animalTypes}
-										uploadDate={new Date(presentationVideo.uploadDate)}
+										presentationVideo={presentationVideoAndAnimalTypes.presentationVideo}
+										animalTypes={presentationVideoAndAnimalTypes.animalTypes}
 									/>
 								)
 							}
