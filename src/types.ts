@@ -47,4 +47,4 @@ type Control = {
 	controlDate: string;
 }
 
-export type {InputChangeEvent, SelectChangeEvent, PresentationVideo, PresentationVideoAndAnimalTypes, Animal, Control};
+export type {InputChangeEvent, SelectChangeEvent, PresentationVideo, PresentationVideoAndAnimalTypes, Animal, Member, Control};

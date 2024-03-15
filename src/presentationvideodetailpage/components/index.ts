@@ -1,3 +1,4 @@
-import PresentationVideoFrame from "./PresentationVideoFrame.tsx";
+import PresentationVideoAndDetails from "./PresentationVideoAndDetails.tsx";
+import AnimalsDetails from "./AnimalsDetails.tsx";
 
-export {PresentationVideoFrame};
+export {PresentationVideoAndDetails, AnimalsDetails};
