@@ -11,10 +11,8 @@ const PresentationVideoDetailPage = () => {
 	const {id: presentationVideoId} = useParams();
 	const {isPending, isError, data} = usePresentationVideoById(presentationVideoId!);
 
-	if (!(isPending || isError)) console.log(data.member);
-
 	return (
-		<div className="h-[100%] flex flex-col justify-between items-center gap-28">
+		<div className="min-h-screen flex flex-col justify-center items-center gap-28">
 			<Header />
 
 			{

@@ -32,8 +32,9 @@ const Header = () => {
 					<Link to="/">
 						<li className="menu-option">Accueil</li>
 					</Link>
-					<li className="menu-option">Adoptions</li>
-					<li className="menu-option">Contrôles</li>
+					<Link to="/controls">
+						<li className="menu-option">Contrôles</li>
+					</Link>
 				</ul>
 
 				<form className="w-1/3 flex justify-end items-center">

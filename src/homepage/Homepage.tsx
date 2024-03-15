@@ -6,8 +6,6 @@ import "./homepage.css";
 
 const Homepage = () => {
 
-	console.log(import.meta.env);
-
 	return (
 		<div className="flex flex-col items-center gap-44">
 			<Header/>

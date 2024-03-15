@@ -20,8 +20,31 @@ type Animal = {
 	age: number;
 	type: string;
 	presentationVideoId: string;
-	arrivalDate: Date;
+	arrivalDate: string;
 	adopted: boolean;
 }
 
-export type {InputChangeEvent, SelectChangeEvent, PresentationVideo, PresentationVideoAndAnimalTypes, Animal};
+type Member = {
+	firstName: string;
+	lastName: string;
+	city: string;
+	mail: string;
+	phone: string;
+}
+
+type Adopter = {
+	firstName: string;
+	lastName: string;
+	address: string;
+	mail: string;
+}
+
+type Control = {
+	animal: Animal;
+	member: Member;
+	adopter: Adopter;
+	adoptionDate: string;
+	controlDate: string;
+}
+
+export type {InputChangeEvent, SelectChangeEvent, PresentationVideo, PresentationVideoAndAnimalTypes, Animal, Control};
