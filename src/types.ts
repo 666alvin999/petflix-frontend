@@ -25,6 +25,7 @@ type Animal = {
 }
 
 type Member = {
+	id: number;
 	firstName: string;
 	lastName: string;
 	city: string;
