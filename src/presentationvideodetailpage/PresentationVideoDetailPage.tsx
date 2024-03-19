@@ -11,7 +11,7 @@ const PresentationVideoDetailPage = () => {
 	const {isPending, isError, data} = usePresentationVideoById(presentationVideoId!);
 
 	return (
-		<div className="min-h-screen flex flex-col justify-center items-center gap-28">
+		<div className="min-h-screen flex flex-col justify-between items-center gap-28">
 			<Header />
 
 			{

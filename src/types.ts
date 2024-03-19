@@ -1,27 +1,14 @@
-import { ChangeEvent } from "react";
+import {ChangeEvent} from "react";
 
 type InputChangeEvent = ChangeEvent<HTMLInputElement>;
+type TextAreaChangeEvent = ChangeEvent<HTMLTextAreaElement>;
 type SelectChangeEvent = ChangeEvent<HTMLSelectElement>;
 
 type PresentationVideo = {
 	id: string;
 	title: string;
 	description: string;
-	uploadDate: Date;
-}
-
-type PresentationVideoAndAnimalTypes = {
-	presentationVideo: PresentationVideo;
-	animalTypes: Array<string>;
-}
-
-type Animal = {
-	name: string;
-	age: number;
-	type: string;
-	presentationVideoId: string;
-	arrivalDate: string;
-	adopted: boolean;
+	uploadDate: string;
 }
 
 type Member = {
@@ -31,6 +18,15 @@ type Member = {
 	city: string;
 	mail: string;
 	phone: string;
+}
+
+type Animal = {
+	name: string;
+	age: number;
+	type: string;
+	presentationVideoId: string;
+	arrivalDate: string;
+	adopted: boolean;
 }
 
 type Adopter = {
@@ -48,4 +44,25 @@ type Control = {
 	controlDate: string;
 }
 
-export type {InputChangeEvent, SelectChangeEvent, PresentationVideo, PresentationVideoAndAnimalTypes, Animal, Member, Control};
+type PresentationVideoAndAnimalTypes = {
+	presentationVideo: PresentationVideo;
+	animalTypes: Array<string>;
+}
+
+type PresentationVideoAndAnimalsAndMember = {
+	presentationVideo: PresentationVideo,
+	animals: Array<Animal>
+	member: Member
+}
+
+export type {
+	InputChangeEvent,
+	TextAreaChangeEvent,
+	SelectChangeEvent,
+	PresentationVideo,
+	Member,
+	Animal,
+	Control,
+	PresentationVideoAndAnimalTypes,
+	PresentationVideoAndAnimalsAndMember
+};

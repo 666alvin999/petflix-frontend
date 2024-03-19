@@ -5,9 +5,7 @@ import {Control} from "../../types.ts";
 
 const ControlsFeed = () => {
 
-	const {isPending, isError, data, error} = useControls();
-
-	if (!(isPending || isError)) console.log(data);
+	const {isPending, isError, data} = useControls();
 
 	return (
 		<>
@@ -19,7 +17,10 @@ const ControlsFeed = () => {
 
 				{
 					isError &&
-					error.message
+					<div className="flex flex-col justify-center items-center">
+						<h2 className="text-3xl font-bold">Oh oh !</h2>
+						<p className="text-xl font-bold">Quelque chose s'est mal passé :( </p>
+					</div>
 				}
 
 				{

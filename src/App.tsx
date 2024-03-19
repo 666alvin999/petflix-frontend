@@ -3,6 +3,7 @@ import {Homepage} from "./homepage";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import {PresentationVideoDetailPage} from "./presentationvideodetailpage";
 import {ControlsPage} from "./controlspage";
+import {SubmitPresentationVideoPage} from "./submitpresentationvideopage";
 
 const router = createBrowserRouter([
 	{
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
 	{
 		path: "/controls",
 		element: <ControlsPage/>
+	},
+	{
+		path: "/submitPresentationVideo",
+		element: <SubmitPresentationVideoPage/>
 	}
 ]);
 

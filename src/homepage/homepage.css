@@ -54,6 +54,7 @@
         .presentation-image {
             height: 198px;
             margin-top: -96px;
+            margin-right: 0;
         }
     }
 

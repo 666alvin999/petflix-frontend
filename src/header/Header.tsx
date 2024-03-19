@@ -32,8 +32,13 @@ const Header = () => {
 					<Link to="/">
 						<li className="menu-option">Accueil</li>
 					</Link>
+
 					<Link to="/controls">
 						<li className="menu-option">Contrôles</li>
+					</Link>
+
+					<Link to="/submitPresentationVideo">
+						<li className="menu-option">Créer une vidéo</li>
 					</Link>
 				</ul>
 
