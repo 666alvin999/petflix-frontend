@@ -39,7 +39,6 @@ const SubmitForm = () => {
 	}, [animals]);
 
 	useEffect(() => {
-		console.log(submit.data);
 		if (submit.data !== null && submit.data !== undefined && submit.data.success) {
 			navigation("/");
 		}

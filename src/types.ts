@@ -30,6 +30,7 @@ type Animal = {
 }
 
 type Adopter = {
+	id: number | null;
 	firstName: string;
 	lastName: string;
 	address: string;
@@ -62,6 +63,7 @@ export type {
 	PresentationVideo,
 	Member,
 	Animal,
+	Adopter,
 	Control,
 	PresentationVideoAndAnimalTypes,
 	PresentationVideoAndAnimalsAndMember

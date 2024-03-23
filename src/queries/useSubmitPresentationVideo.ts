@@ -5,7 +5,6 @@ const useSubmitPresentationVideo = (presentationVideoAndAnimalsAndMember: Presen
 	return useQuery({
 		queryKey: ["useSubmitPresentationVideo", presentationVideoAndAnimalsAndMember],
 		queryFn: async () => {
-			console.log(presentationVideoAndAnimalsAndMember);
 			if (doFetch) {
 				const url = `${import.meta.env.VITE_API_URL}/submitPresentationVideo/submit`;
 
@@ -20,6 +19,7 @@ const useSubmitPresentationVideo = (presentationVideoAndAnimalsAndMember: Presen
 				}
 
 				const result = await fetch(url, options);
+
 				return await result.json();
 			}
 

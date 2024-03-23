@@ -1,4 +1,6 @@
 import {Animal, Member} from "../../types.ts";
+import {useState} from "react";
+import AdoptionPopIn from "./AdoptionPopIn.tsx";
 
 type Props = {
 	animals: Array<Animal>;
@@ -6,6 +8,12 @@ type Props = {
 }
 
 const AnimalsDetails = ({animals, member}: Props) => {
+
+	const [animalToAdopt, setAnimalToAdopt] = useState<Animal>();
+
+	const handleAdoptPopUp = (animal: Animal) => {
+		setAnimalToAdopt(animal);
+	}
 
 	return (
 		<div className="w-[80%] p-8 flex flex-row justify-around border-4 border-amber-950 rounded-xl shadow-box">
@@ -15,8 +23,19 @@ const AnimalsDetails = ({animals, member}: Props) => {
 					{
 						animals.map((animal: Animal) => {
 								return (
-									<li>
-										{animal.name}, {animal.age} ans, {animal.type} arrivé le {new Date(animal.arrivalDate).getDate()}/{new Date(animal.arrivalDate).getMonth()}/{new Date(animal.arrivalDate).getFullYear()} {animal.adopted ? "(déjà adopté)" : "(à adopter)"}
+									<li className="flex flex-row justify-center items-center gap-2">
+										<p>{animal.name}, {animal.age} ans, {animal.type} arrivé le {new Date(animal.arrivalDate).getDate()}/{new Date(animal.arrivalDate).getMonth()}/{new Date(animal.arrivalDate).getFullYear()}</p>
+
+										{
+											animal.adopted ?
+												<p>(déjà adopté)</p>
+												:
+												<button
+													className="bg-amber-950 text-amber-100 font-bold px-2 py-1 border-4 border-amber-950 rounded-xl"
+													onClick={() => handleAdoptPopUp(animal)}>
+													Adopter
+												</button>
+										}
 									</li>
 								);
 							}
@@ -42,6 +61,11 @@ const AnimalsDetails = ({animals, member}: Props) => {
 					</p>
 				</div>
 			</div>
+
+			{
+				animalToAdopt !== undefined &&
+				<AdoptionPopIn animalToAdopt={animalToAdopt} member={member} setAnimalToAdopt={setAnimalToAdopt} />
+			}
 		</div>
 	);
 
